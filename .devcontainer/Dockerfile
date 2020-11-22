@@ -1,4 +1,5 @@
-FROM python:3.7-slim-stretch
+ARG VARIANT=ubuntu-20.04
+FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
 ARG CONFTEST_VERSION=0.21.0
 ARG KONSTRAINT_VERSION=0.9.2
@@ -16,8 +17,7 @@ RUN apt-get update -y && \
   git \
   gnupg \
   software-properties-common \
-  wget \
-  zsh
+  wget 
 # Get all of the signatures we need all at once.
 RUN curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
   # Add conftest

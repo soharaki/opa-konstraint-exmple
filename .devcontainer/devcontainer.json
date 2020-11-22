@@ -7,7 +7,7 @@
     },
     // Set *default* container specific settings.json values on container create.
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/zsh",
+        "terminal.integrated.shell.linux": "/bin/bash",
         // dotfiles
         "dotfiles.repository": "soharaki/opa-konstraint-exmple",
         "dotfiles.targetPath": "~/.devcontainer/dotfiles",
@@ -33,7 +33,7 @@
     "mounts": [
         "source=${localEnv:HOME}/.ssh/,target=/root/.ssh/,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached",
-        "source=${localWorkspaceFolder}/.devcontainer/.local/share/zsh/zsh_history,target=/root/.local/share/zsh/zsh_history,type=bind,consistency=cached",
+        "source=${localWorkspaceFolder}/.devcontainer/.local/share/bash/bash_history,target=/root/.local/share/bash/bash_history,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.kube/,target=/root/.kube/,type=bind,consistency=cached",
     ],
 }
